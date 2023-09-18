@@ -6,6 +6,7 @@ RGB_MATRIX_EFFECT(game_breathing)
 RGB_MATRIX_EFFECT(game_led_effect_key_only)
 RGB_MATRIX_EFFECT(game_led_effect)
 RGB_MATRIX_EFFECT(cool_keys)
+RGB_MATRIX_EFFECT(cool_keys_key_only)
 RGB_MATRIX_EFFECT(blind_type_key_only)
 RGB_MATRIX_EFFECT(blind_type)
 
@@ -26,7 +27,7 @@ int GAME_LED_CONFIG[] = {
     5, 0, 0,          2,       0, 0, 0, 2, 2, 2,  // Ctrl, GUI, Alt, Space, RAlt, FN, Ctrl, Left, Down, Right
     9, 9, 9, 9, 9, 9  // UNDERGLOW
 };
-int COOL_LED_CONFIG[] = {
+int BLIND_TYPING_CONFIG[] = {
     // LED Index to Flag
     3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0,  // Esc, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -, =, Backspace, Delete
     4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4,  // Tab, Q, W, E, R, T, Y, U, I, O, P, [, ], backslash , Home
@@ -35,7 +36,7 @@ int COOL_LED_CONFIG[] = {
     2, 3, 2,          0,       5, 5, 5, 4, 4, 4,  // Ctrl, GUI, Alt, Space, RAlt, FN, Ctrl, Left, Down, Right
     9, 9, 9, 9, 9, 9  // UNDERGLOW
 };
-int BLIND_TYPING_CONFIG[] = {
+int COOL_LED_CONFIG[] = {
     // LED Index to Flag
     0, 1, 2, 3, 4, 4, 5, 5, 3, 2, 1, 1, 1, 0, 0,  // Esc, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -, =, Backspace, Delete
     0, 1, 2, 3, 4, 4, 5, 5, 3, 2, 1, 1, 1, 0, 0,  // Tab, Q, W, E, R, T, Y, U, I, O, P, [, ], backslash , Home
@@ -114,6 +115,9 @@ bool game_breathing(effect_params_t* params) {
 }
 static bool cool_keys(effect_params_t* params) {
   return set_rgb_effect(0, COOL_LED_CONFIG, params);
+}
+static bool cool_keys_key_only(effect_params_t* params) {
+  return set_rgb_effect(3, COOL_LED_CONFIG, params);
 }
 static bool blind_type(effect_params_t* params) {
   return set_rgb_effect(0, BLIND_TYPING_CONFIG, params);
