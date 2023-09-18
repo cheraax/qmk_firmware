@@ -89,7 +89,7 @@ static bool set_rgb_effect(int mode, int LED_CONFIG[], effect_params_t* params){
         rgb_matrix_set_color(i, ad_key2.r, ad_key2.g, ad_key2.b);
     } else if (equal(LED_CONFIG[i], BG_FLAG)){
       if (mode == 2){
-        float bright_lvl = 0.6;
+        float bright_lvl = 1.0;//0.6;
         HSV bg_hsv = { (int)(bright_lvl*rgb_matrix_config.hsv.h), (int)(bright_lvl*rgb_matrix_config.hsv.s), (int)(bright_lvl*rgb_matrix_config.hsv.v)}; 
         bg_key = rgb_matrix_hsv_to_rgb(bg_hsv);
         rgb_matrix_set_color(i, bg_key.r, bg_key.g, bg_key.b);
@@ -121,6 +121,4 @@ static bool blind_type(effect_params_t* params) {
 static bool blind_type_key_only(effect_params_t* params) {
   return set_rgb_effect(3, BLIND_TYPING_CONFIG, params);
 }
-
-
 #endif // RGB_MATRIX_CUSTOM_EFFECT_IMPLS

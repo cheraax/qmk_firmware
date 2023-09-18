@@ -16,7 +16,14 @@
 #pragma once
 
 #define FORCE_NKRO                     // NKRO by default requires to be turned on, this forces it on during keyboard startup regardless of EEPROM setting. NKRO can still be turned off but will be turned on again if the keyboard reboots.
-#define TAPPING_TOGGLE 2
+// #define TAPPING_TERM 175
+// #define TAPPING_TERM_PER_KEY
+// Пример определения клавиши Caps Lock с использованием Tap Dance
+enum {
+    TD_CAPS_LOCK // Название для Tap Dance функции
+};
+
+
 
 #undef ENABLE_RGB_MATRIX_ALPHAS_MODS
 #undef ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
