@@ -3,12 +3,12 @@
 // Declare custom effects using the RGB_MATRIX_EFFECT macro
 // (note the lack of semicolon after the macro!)
 RGB_MATRIX_EFFECT(game_breathing)
-RGB_MATRIX_EFFECT(game_led_effect_key_only)
 RGB_MATRIX_EFFECT(game_led_effect)
+RGB_MATRIX_EFFECT(game_led_effect_key_only)
 RGB_MATRIX_EFFECT(cool_keys)
 RGB_MATRIX_EFFECT(cool_keys_key_only)
-RGB_MATRIX_EFFECT(blind_type_key_only)
 RGB_MATRIX_EFFECT(blind_type)
+RGB_MATRIX_EFFECT(blind_type_key_only)
 
 // Step 2.
 // Define effects inside the `RGB_MATRIX_CUSTOM_EFFECT_IMPLS` ifdef block

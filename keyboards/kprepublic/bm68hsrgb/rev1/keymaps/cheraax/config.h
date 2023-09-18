@@ -18,6 +18,9 @@
 #define FORCE_NKRO                     // NKRO by default requires to be turned on, this forces it on during keyboard startup regardless of EEPROM setting. NKRO can still be turned off but will be turned on again if the keyboard reboots.
 // #define TAPPING_TERM 200
 // #define TAPPING_TERM_PER_KEY
+//#define SPLIT_LED_STATE_ENABLE
+//#define LED_CAPS_LOCK_PIN 43
+
 
 #undef ENABLE_RGB_MATRIX_ALPHAS_MODS
 #undef ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN

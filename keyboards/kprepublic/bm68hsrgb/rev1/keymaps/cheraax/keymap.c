@@ -48,10 +48,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),  
  };
 
-
-
-
-
 // It's easy. You assign F(0) to the key in question in the keymap array. Then you define fn_actions, like this:
 // const uint16_t PROGMEM fn_actions[] = {
 //     [0] = ACTION_LAYER_TAP_TOGGLE(2)
